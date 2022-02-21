@@ -1,9 +1,9 @@
-Model/PoliticalParties.java
- Model.PoliticalParties
 seed/Loader.java
  seed.Loader
 Model/WinningParty.java
  Model.WinningParty
+Model/PartyCodes.java
+ Model.PartyCodes
 print/Printer.java
  print.Printer
 Machine.java

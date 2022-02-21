@@ -1,27 +1,27 @@
-import Model.PoliticalParties;
+import Model.PartyCodes;
 import Model.WinningParty;
 import print.Printer;
 import seed.Loader;
 
-import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class Machine {
 
-    private Loader loader;
+    private final Loader loader;
+    private final Printer printer;
 
     public Machine() {
         this.loader = new Loader();
+        this.printer = new Printer();
     }
 
     public static void main(String[] args) {
         Machine machine = new Machine();
-        Printer printer = new Printer();
+
 
         HashMap<String, HashMap<String, Integer>> data = machine.loader.loadDataFromFile();
-        data.forEach((key, value) -> printer.print(key, getWinningPartyData(value)));
+        data.forEach((key, value) -> machine.printer.print(key, getWinningPartyData(value)));
 
     }
 
@@ -38,7 +38,7 @@ public class Machine {
 
         }
         assert maxEntry != null;
-        return new WinningParty(PoliticalParties.valueOf(maxEntry.getKey()), String.format("%.1f", (maxEntry.getValue()/sum)*100));
+        return new WinningParty(PartyCodes.valueOf(maxEntry.getKey()), String.format("%.1f", (maxEntry.getValue()/sum)*100));
 
 
     }

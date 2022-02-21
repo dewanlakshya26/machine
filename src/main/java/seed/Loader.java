@@ -15,7 +15,6 @@ public class Loader {
         ClassLoader classLoader = getClass().getClassLoader();
         InputStream inputStream = classLoader.getResourceAsStream(fileName);
 
-
         if (inputStream == null) {
             throw new IllegalArgumentException("file not found! " + fileName);
         } else {

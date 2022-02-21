@@ -1,17 +1,17 @@
 package Model;
 
 public class WinningParty {
-    private final PoliticalParties politicalParties;
+    private final PartyCodes partyCodes;
     private final String percentage;
 
-    public WinningParty(PoliticalParties politicalParties, String percentage) {
-        this.politicalParties = politicalParties;
+    public WinningParty(PartyCodes partyCodes, String percentage) {
+        this.partyCodes = partyCodes;
         this.percentage = percentage;
     }
 
 
-    public PoliticalParties getPoliticalParties() {
-        return politicalParties;
+    public PartyCodes getPoliticalParties() {
+        return partyCodes;
     }
 
     public String getPercentage() {

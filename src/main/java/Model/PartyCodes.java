@@ -1,6 +1,6 @@
 package Model;
 
-public enum PoliticalParties {
+public enum PartyCodes {
 
     BJP("Bhartiya Janta Party"),
     INC("Indian National Congress"),
@@ -15,7 +15,7 @@ public enum PoliticalParties {
         return fullName;
     }
 
-    PoliticalParties(String fullName) {
+    PartyCodes(String fullName) {
         this.fullName = fullName;
     }
 }
